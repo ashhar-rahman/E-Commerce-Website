@@ -61,6 +61,8 @@ p{
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transform: scale(.75);
+    transition: 0.2s ease;
 }
 #progress-value {
     display: block;
@@ -93,21 +95,37 @@ body{
 
 /* profile picture  */
 .pic{
-    background-image: url(img/button.png);
-    background-color: transparent;
+    /* background-image: url(/img/button.png);
+    background-color: transparent; */
     color: #088178;
     border: 0;
-    padding:14px 40px 8px 55px ;
+    /* padding:14px 40px 8px 55px ; */
     background-repeat:no-repeat ;
+    transform: scale(1.2);
+    padding-left: 20px;
     cursor: pointer;
-    transform: scale(2);
     /* font-weight: 700; */
     /* font-size: 16px; */
 }
  
-.pic:hover{
-    transform: scale(2.2);
-    transition:0.2s ease; 
+@media (min-width:499px) {
+    .pic{
+        background-image: url(/img/button.png);
+        background-color: transparent;
+        color: #088178;
+        border: 0;
+        padding:14px 40px 8px 55px ;
+        background-repeat:no-repeat ;
+        cursor: pointer;
+        /* font-weight: 700; */
+        /* font-size: 16px; */
+    }
+     .pic:hover{
+        transform: scale(1.5);
+        transition:0.2s ease; 
+    }
+
+
 }
 
 /* HEADER START  */
@@ -244,7 +262,7 @@ body{
 }
 
 #hero button{
-    background-image: url(/img/button.png);
+    background-image: url(img/button.png);
     background-color: transparent;
     color: #088178;
     border: 0;
@@ -292,7 +310,12 @@ body{
     transform: scale(1.5);
     transition: 0.2s ease;
 }
-
+@media (min-width:499) {
+    #feature .fe-box:hover{
+        transform: scale(1.5);
+        transition: 0.2s ease;
+    }
+}
 #feature .fe-box h6{
     display: inline-block;
     padding: 9px 8px 9px 8px;
@@ -319,7 +342,6 @@ body{
 #feature .fe-box:nth-child(6) h6{
     background-color: #fff2e5;
 }
-
 
 
 
@@ -370,7 +392,11 @@ body{
     border-radius: 14px;
 
 }
+#product1 .pro:hover img{
+    transform: scale(1.2);
+    transition: 0.2s ease;
 
+}
 #product1 .pro:hover {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
    
@@ -422,7 +448,7 @@ body{
 }
 
 #product1 .pro .card:hover{
-    transform: scale(2);
+    transform: scale(1.5);
     transition: 0.2s ease;
     right: 25px;
 }
@@ -493,7 +519,7 @@ body{
     align-items: flex-start;
     text-align: center;
     background-image: url(img/banner/b17.jpg);
-    min-width: 580px;
+    min-width: 680px;
     height: 50vh;
     background-size: cover;
     background-position: center;
@@ -559,7 +585,7 @@ button.white{
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    background-image:url(/img/banner/b1.jpg);
+    background-image:url(img/banner/b1.jpg);
     background-repeat: no-repeat;
     background-position: 20% 30%;
     background-color: #041e42;
@@ -644,15 +670,17 @@ footer .logo{
     margin-bottom: 30px;
 
 }
-/* footer i{
-    font-size: 23px;
-    padding: 3px;
-    
-} */
-/* footer .logo:hover, i:hover{
-    transform: scale(1.5);
-    transition: 0.2s ease;
-} */
+@media (min-width:799px){
+    footer i{
+        font-size: 23px;
+        padding: 3px;
+        
+    }
+    footer .logo:hover, i:hover{
+        transform: scale(1.5);
+        transition: 0.2s ease;
+    }
+}
 footer h4 {
     font-size: 14px;
     padding-bottom: 20px;
