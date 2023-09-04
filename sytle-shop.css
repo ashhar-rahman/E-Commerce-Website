@@ -1,5 +1,18 @@
 /* link sylte.css */
 
+.clickeffect{
+    box-shadow: 4px 4px 0 #01504a;
+    transition: transform 0.2s,  box-shadow 0.2s;
+}
+.clickeffect:active{
+    transform: translateX(4px), translateY(4px);
+    box-shadow: 0px 0px 0 #01504a;
+}
+
+
+
+
+
 
 #page-header{
     background-image: url(img/banner/b1.jpg);
@@ -11,10 +24,61 @@
     justify-content: center;
     text-align: center;
     padding: 14px;
+    align-items: center;
 }
-#page-header h2,#page-header p{
+#page-header h2{
+    color: red;
+}
+#page-header p{
     color: aliceblue;
+    
 }
+
+.effect{
+   
+    white-space: nowrap;
+    overflow: hidden;
+    
+    border-right: 0.15rem solid orange;
+    animation: blink .75s step-end infinite, typing 3.5s steps(15,end) infinite ;
+}
+@keyframes typing {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 45%;
+    }
+    
+}
+@media (min-width:799px) {
+    @keyframes typing {
+        from{
+            width: 0%;
+        }
+        to{
+            width: 25%;
+        }
+        
+    }
+}
+
+@keyframes blink {
+    from{
+        border-color: transparent;
+    }
+    50%{
+        border-color: orange;
+        
+        
+    }
+}
+
+
+
+
+
+
 
 #pagination{
     text-align: center;
